@@ -16,6 +16,7 @@
 		983B2BCA1DBA4230002F35E6 /* PRRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983B2BC91DBA4230002F35E6 /* PRRecordModel.swift */; };
 		983B2BCF1DBA4723002F35E6 /* PRHomeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983B2BCD1DBA4723002F35E6 /* PRHomeTableCell.swift */; };
 		983B2BD01DBA4723002F35E6 /* PRHomeTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 983B2BCE1DBA4723002F35E6 /* PRHomeTableCell.xib */; };
+		983B2BD21DBA4D8C002F35E6 /* PRHomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983B2BD11DBA4D8C002F35E6 /* PRHomeTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		983B2BC91DBA4230002F35E6 /* PRRecordModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PRRecordModel.swift; sourceTree = "<group>"; };
 		983B2BCD1DBA4723002F35E6 /* PRHomeTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PRHomeTableCell.swift; sourceTree = "<group>"; };
 		983B2BCE1DBA4723002F35E6 /* PRHomeTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PRHomeTableCell.xib; sourceTree = "<group>"; };
+		983B2BD11DBA4D8C002F35E6 /* PRHomeTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PRHomeTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		983B2BC21DBA3EB1002F35E6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				983B2BD11DBA4D8C002F35E6 /* PRHomeTableView.swift */,
 				983B2BCD1DBA4723002F35E6 /* PRHomeTableCell.swift */,
 				983B2BCE1DBA4723002F35E6 /* PRHomeTableCell.xib */,
 			);
@@ -172,6 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				983B2BD21DBA4D8C002F35E6 /* PRHomeTableView.swift in Sources */,
 				983B2BCA1DBA4230002F35E6 /* PRRecordModel.swift in Sources */,
 				983B2BCF1DBA4723002F35E6 /* PRHomeTableCell.swift in Sources */,
 				983B2BC81DBA41B7002F35E6 /* PRHomeViewController.swift in Sources */,

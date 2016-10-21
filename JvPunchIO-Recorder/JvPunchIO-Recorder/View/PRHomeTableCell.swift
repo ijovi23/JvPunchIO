@@ -9,7 +9,10 @@
 import UIKit
 
 class PRHomeTableCell: UITableViewCell {
-
+    
+    @IBOutlet weak var labTime: UILabel!
+    @IBOutlet weak var labDate: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

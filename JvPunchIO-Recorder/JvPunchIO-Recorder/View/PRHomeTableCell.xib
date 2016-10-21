@@ -23,11 +23,15 @@
                                     <constraint firstAttribute="width" constant="70" id="o1s-gs-NaP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.68455693493150682" green="0.30784460616438358" blue="0.061269263698630137" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0000-00-00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="MX0-Do-1w8">
-                                <rect key="frame" x="237" y="26" width="75" height="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0000-00-00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="MX0-Do-1w8">
+                                <rect key="frame" x="237" y="27" width="75" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="8th-uH-tTz"/>
+                                    <constraint firstAttribute="width" constant="75" id="L8V-wN-zSC"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -35,9 +39,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="MX0-Do-1w8" secondAttribute="bottom" constant="2" id="6io-IJ-hWK"/>
                             <constraint firstItem="Qiv-DC-Jom" firstAttribute="top" secondItem="Sep-4C-scL" secondAttribute="top" constant="8" id="GY6-D0-ehg"/>
                             <constraint firstAttribute="bottom" secondItem="Qiv-DC-Jom" secondAttribute="bottom" constant="8" id="IWe-ep-4mK"/>
                             <constraint firstItem="Qiv-DC-Jom" firstAttribute="leading" secondItem="Sep-4C-scL" secondAttribute="leading" constant="8" id="gVi-Du-2Q7"/>
+                            <constraint firstAttribute="trailing" secondItem="MX0-Do-1w8" secondAttribute="trailing" constant="8" id="t7b-EP-CG5"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -48,6 +54,10 @@
                     <constraint firstAttribute="trailing" secondItem="Sep-4C-scL" secondAttribute="trailing" id="per-1M-g7H"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="labDate" destination="MX0-Do-1w8" id="LNo-1z-oPa"/>
+                <outlet property="labTime" destination="Qiv-DC-Jom" id="ef3-kw-vr3"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

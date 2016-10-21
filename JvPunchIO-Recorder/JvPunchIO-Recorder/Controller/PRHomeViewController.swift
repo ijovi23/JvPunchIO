@@ -10,7 +10,7 @@ import UIKit
 
 class PRHomeViewController: UIViewController {
 
-    @IBOutlet weak var table: UITableView!
+    @IBOutlet weak var table: PRHomeTableView!
     
     @IBOutlet weak var bottomBar: UIView!
     

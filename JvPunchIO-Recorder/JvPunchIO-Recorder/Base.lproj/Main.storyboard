@@ -54,47 +54,27 @@
                                     <constraint firstAttribute="height" constant="49" id="pP0-zF-d3K"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Yh9-T2-LRB">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Yh9-T2-LRB" customClass="PRHomeTableView" customModule="JvPunchIO_Recorder" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <view key="tableHeaderView" contentMode="scaleToFill" id="fmD-I9-G1b">
-                                    <rect key="frame" x="0.0" y="64" width="600" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" red="0.46915132710000002" green="0.72257598460000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </view>
-                                <view key="tableFooterView" contentMode="scaleToFill" id="TwS-4x-dz8">
-                                    <rect key="frame" x="0.0" y="180" width="600" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </view>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="v1D-gE-kaq">
-                                        <rect key="frame" x="0.0" y="136" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="v1D-gE-kaq" id="RPb-Ob-2M5">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="P4p-vA-XzW" secondAttribute="trailing" id="E8T-38-pi9"/>
                             <constraint firstItem="Yh9-T2-LRB" firstAttribute="leading" secondItem="nv6-Qj-Hsa" secondAttribute="leading" id="JDM-yn-MCp"/>
-                            <constraint firstItem="P4p-vA-XzW" firstAttribute="top" secondItem="Yh9-T2-LRB" secondAttribute="bottom" id="Ll3-pN-s2Q"/>
                             <constraint firstItem="P4p-vA-XzW" firstAttribute="leading" secondItem="nv6-Qj-Hsa" secondAttribute="leading" id="Mhg-xi-w7x"/>
                             <constraint firstItem="Yh9-T2-LRB" firstAttribute="top" secondItem="nv6-Qj-Hsa" secondAttribute="top" id="Tai-hh-UYZ"/>
                             <constraint firstAttribute="trailing" secondItem="Yh9-T2-LRB" secondAttribute="trailing" id="Vyo-Is-UCi"/>
                             <constraint firstItem="PFb-ei-WlM" firstAttribute="top" secondItem="P4p-vA-XzW" secondAttribute="bottom" id="rOU-Xy-6jQ"/>
+                            <constraint firstAttribute="bottom" secondItem="Yh9-T2-LRB" secondAttribute="bottom" id="ukj-x8-o2l"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HgK-Hu-0pf"/>
                     <connections>
                         <outlet property="bottomBar" destination="P4p-vA-XzW" id="ZiU-MW-aCq"/>
                         <outlet property="btnPunch" destination="iyD-K2-bGU" id="voD-RK-VKr"/>
-                        <outlet property="table" destination="Yh9-T2-LRB" id="Msc-O4-XVy"/>
+                        <outlet property="table" destination="Yh9-T2-LRB" id="6ta-sA-N1k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zCr-u1-NNx" userLabel="First Responder" sceneMemberID="firstResponder"/>
