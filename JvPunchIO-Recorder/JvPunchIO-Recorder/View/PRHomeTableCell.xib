@@ -1,57 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="PRHomeTableCell" customModule="JvPunchIO_Recorder" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44.5"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44.5"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <frame key="frameInset" width="375" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sep-4C-scL">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qiv-DC-Jom">
-                                <rect key="frame" x="8" y="8" width="70" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="o1s-gs-NaP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <color key="textColor" red="0.68455693493150682" green="0.30784460616438358" blue="0.061269263698630137" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.68455693493150682" green="0.30784460616438358" blue="0.061269263698630137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0000-00-00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="MX0-Do-1w8">
-                                <rect key="frame" x="237" y="27" width="75" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="8th-uH-tTz"/>
                                     <constraint firstAttribute="width" constant="75" id="L8V-wN-zSC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="MX0-Do-1w8" secondAttribute="bottom" constant="2" id="6io-IJ-hWK"/>
-                            <constraint firstItem="Qiv-DC-Jom" firstAttribute="top" secondItem="Sep-4C-scL" secondAttribute="top" constant="8" id="GY6-D0-ehg"/>
-                            <constraint firstAttribute="bottom" secondItem="Qiv-DC-Jom" secondAttribute="bottom" constant="8" id="IWe-ep-4mK"/>
+                            <constraint firstAttribute="bottom" secondItem="MX0-Do-1w8" secondAttribute="bottom" id="6io-IJ-hWK"/>
+                            <constraint firstItem="Qiv-DC-Jom" firstAttribute="top" secondItem="Sep-4C-scL" secondAttribute="top" constant="2" id="GY6-D0-ehg"/>
+                            <constraint firstAttribute="bottom" secondItem="Qiv-DC-Jom" secondAttribute="bottom" constant="2" id="IWe-ep-4mK"/>
                             <constraint firstItem="Qiv-DC-Jom" firstAttribute="leading" secondItem="Sep-4C-scL" secondAttribute="leading" constant="8" id="gVi-Du-2Q7"/>
                             <constraint firstAttribute="trailing" secondItem="MX0-Do-1w8" secondAttribute="trailing" constant="8" id="t7b-EP-CG5"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Sep-4C-scL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="2Fh-fX-tIy"/>
-                    <constraint firstItem="Sep-4C-scL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="5tB-gV-ZrE"/>
-                    <constraint firstAttribute="bottom" secondItem="Sep-4C-scL" secondAttribute="bottom" id="gXD-Ec-Sgb"/>
-                    <constraint firstAttribute="trailing" secondItem="Sep-4C-scL" secondAttribute="trailing" id="per-1M-g7H"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Sep-4C-scL" secondAttribute="bottom" id="AtD-LS-hAY"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Sep-4C-scL" secondAttribute="trailing" id="HFW-8X-bUA"/>
+                    <constraint firstItem="Sep-4C-scL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="LLC-p2-OMP"/>
+                    <constraint firstItem="Sep-4C-scL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Y7z-51-ifR"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

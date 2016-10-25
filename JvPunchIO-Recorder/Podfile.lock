@@ -1,0 +1,22 @@
+PODS:
+  - FileKit (4.0.0)
+
+DEPENDENCIES:
+  - FileKit (from `https://github.com/nvzqz/FileKit.git`, tag `v4.0.0`)
+
+EXTERNAL SOURCES:
+  FileKit:
+    :git: https://github.com/nvzqz/FileKit.git
+    :tag: v4.0.0
+
+CHECKOUT OPTIONS:
+  FileKit:
+    :git: https://github.com/nvzqz/FileKit.git
+    :tag: v4.0.0
+
+SPEC CHECKSUMS:
+  FileKit: 2589d0393b3bfdc599c2ba6e41419be6db4279e0
+
+PODFILE CHECKSUM: 3f9c0cde879fa7e04db4f8b262234a32bf6df5b8
+
+COCOAPODS: 1.0.1

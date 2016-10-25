@@ -14,6 +14,9 @@ class PRHomeViewController: UIViewController {
     
     @IBOutlet weak var bottomBar: UIView!
     
+    @IBOutlet weak var btnClear: UIBarButtonItem!
+    
+    @IBOutlet weak var btnAdd: UIButton!
     @IBOutlet weak var btnPunch: UIButton!
     
     override func viewDidLoad() {
@@ -28,14 +31,24 @@ class PRHomeViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func btnPunchPressed(_ sender: UIButton) {
+        self.table.dataManager.addRecord(Date())
+        self.table.reloadData()
     }
-    */
 
+    @IBAction func btnClearPressed(_ sender: UIBarButtonItem) {
+        let alert = UIAlertController(title: "Clear all records?", message: nil, preferredStyle: .alert)
+        
+        let actCancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(actCancel)
+        
+        let actClear = UIAlertAction(title: "Clear", style: .destructive) { (action) in
+            self.table.dataManager.clear()
+            self.table.reloadData()
+        }
+        alert.addAction(actClear)
+        
+        self.present(alert, animated: true, completion: nil)
+    }
 }

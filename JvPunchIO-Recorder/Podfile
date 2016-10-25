@@ -1,0 +1,8 @@
+platform :ios, '8.0'
+use_frameworks!
+
+pod 'FileKit', :git => 'https://github.com/nvzqz/FileKit.git', :tag => 'v4.0.0'
+
+target 'JvPunchIO-Recorder' do
+
+end
