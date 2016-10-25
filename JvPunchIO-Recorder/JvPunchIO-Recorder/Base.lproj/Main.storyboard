@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -44,9 +45,6 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHr-1f-Ndr">
                                         <color key="backgroundColor" red="1" green="0.78421982020547942" blue="0.25682255993150682" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="XKC-sF-so9"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title="Add">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -56,7 +54,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iyD-K2-bGU">
-                                        <color key="backgroundColor" red="1" green="0.64038420376712324" blue="0.52394584760273977" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="1" green="0.31587114726027399" blue="0.26792594178082191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title="Punch Now">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -69,6 +67,7 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="uHr-1f-Ndr" firstAttribute="leading" secondItem="P4p-vA-XzW" secondAttribute="leading" id="1b7-8X-63d"/>
+                                    <constraint firstItem="uHr-1f-Ndr" firstAttribute="width" secondItem="P4p-vA-XzW" secondAttribute="width" multiplier="0.4" id="IOA-xe-74d"/>
                                     <constraint firstItem="iyD-K2-bGU" firstAttribute="top" secondItem="P4p-vA-XzW" secondAttribute="top" id="PBa-t2-3X0"/>
                                     <constraint firstItem="uHr-1f-Ndr" firstAttribute="top" secondItem="P4p-vA-XzW" secondAttribute="top" id="Tvx-MS-o3L"/>
                                     <constraint firstAttribute="bottom" secondItem="iyD-K2-bGU" secondAttribute="bottom" id="UkF-ou-bcY"/>
@@ -92,6 +91,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="0 hrs" id="HgK-Hu-0pf">
                         <barButtonItem key="rightBarButtonItem" title="clear" id="ZuY-0w-K6e">
+                            <color key="tintColor" red="1" green="0.31587114729999999" blue="0.26792594180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="btnClearPressed:" destination="M3L-AN-8RK" id="jy8-Pm-JVl"/>
                             </connections>

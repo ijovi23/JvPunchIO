@@ -59,6 +59,13 @@ class PRRecordDataManager: NSObject {
         saveData(callback: nil)
     }
     
+    func modifyRecord(atGroupIndex groupIndex: Int, recordIndex: Int, withDate date: Date) {
+        let modifyingGroup = data[groupIndex]
+        modifyingGroup.records[recordIndex] = date
+        
+        saveData(callback: nil)
+    }
+    
     func clear() {
         data = []
         saveData(callback: nil)

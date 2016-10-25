@@ -24,6 +24,8 @@
 		983B2BD21DBA4D8C002F35E6 /* PRHomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983B2BD11DBA4D8C002F35E6 /* PRHomeTableView.swift */; };
 		98D46D1F1DBF296300C72073 /* PRAddRecordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98D46D1E1DBF296300C72073 /* PRAddRecordView.xib */; };
 		98D46D211DBF302800C72073 /* PRAddRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D46D201DBF302800C72073 /* PRAddRecordView.swift */; };
+		98D46D231DBF57F300C72073 /* PRModifyRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D46D221DBF57F300C72073 /* PRModifyRecordView.swift */; };
+		98D46D251DBF57FD00C72073 /* PRModifyRecordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98D46D241DBF57FD00C72073 /* PRModifyRecordView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		983B2BD11DBA4D8C002F35E6 /* PRHomeTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PRHomeTableView.swift; sourceTree = "<group>"; };
 		98D46D1E1DBF296300C72073 /* PRAddRecordView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PRAddRecordView.xib; sourceTree = "<group>"; };
 		98D46D201DBF302800C72073 /* PRAddRecordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PRAddRecordView.swift; sourceTree = "<group>"; };
+		98D46D221DBF57F300C72073 /* PRModifyRecordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PRModifyRecordView.swift; sourceTree = "<group>"; };
+		98D46D241DBF57FD00C72073 /* PRModifyRecordView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PRModifyRecordView.xib; sourceTree = "<group>"; };
 		F01F8B9F1D292A5A1F7783BD /* Pods-JvPunchIO-Recorder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JvPunchIO-Recorder.release.xcconfig"; path = "Pods/Target Support Files/Pods-JvPunchIO-Recorder/Pods-JvPunchIO-Recorder.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,6 +152,8 @@
 				981230821DBDF6CA005A1FFC /* PRHomeTableHeader.xib */,
 				98D46D201DBF302800C72073 /* PRAddRecordView.swift */,
 				98D46D1E1DBF296300C72073 /* PRAddRecordView.xib */,
+				98D46D221DBF57F300C72073 /* PRModifyRecordView.swift */,
+				98D46D241DBF57FD00C72073 /* PRModifyRecordView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -227,6 +233,7 @@
 				983B2BB91DBA1347002F35E6 /* LaunchScreen.storyboard in Resources */,
 				98D46D1F1DBF296300C72073 /* PRAddRecordView.xib in Resources */,
 				983B2BB61DBA1347002F35E6 /* Assets.xcassets in Resources */,
+				98D46D251DBF57FD00C72073 /* PRModifyRecordView.xib in Resources */,
 				983B2BB41DBA1347002F35E6 /* Main.storyboard in Resources */,
 				983B2BD01DBA4723002F35E6 /* PRHomeTableCell.xib in Resources */,
 				981230831DBDF6CA005A1FFC /* PRHomeTableHeader.xib in Resources */,
@@ -296,6 +303,7 @@
 				981230811DBDF6B8005A1FFC /* PRHomeTableHeader.swift in Sources */,
 				983B2BAF1DBA1347002F35E6 /* AppDelegate.swift in Sources */,
 				9812307D1DBDEBED005A1FFC /* Date+PRExt.swift in Sources */,
+				98D46D231DBF57F300C72073 /* PRModifyRecordView.swift in Sources */,
 				9812307F1DBDEF95005A1FFC /* String+PRExt.swift in Sources */,
 				98D46D211DBF302800C72073 /* PRAddRecordView.swift in Sources */,
 			);

@@ -77,6 +77,7 @@ class PRHomeViewController: UIViewController, PRAddRecordViewDelegate {
         }
     }
     
+    
     func recordDataChanged() {
         let totalDur = PRRecordDataManager.sharedManager.calcDuration()
         let totalDurString = String(format: "%.2lf", totalDur / 3600.0)

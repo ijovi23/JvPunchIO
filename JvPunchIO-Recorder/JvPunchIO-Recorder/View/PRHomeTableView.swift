@@ -10,9 +10,14 @@ import UIKit
 
 let kRecordCellID = "RecordCell"
 
-class PRHomeTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
+class PRHomeTableView: UITableView, UITableViewDataSource, UITableViewDelegate, PRModifyRecordViewDelegate {
 
     weak var dataManager : PRRecordDataManager! = PRRecordDataManager.sharedManager
+    
+    var modifyView: PRModifyRecordView?
+    
+    var modifyingIndexPath: IndexPath?
+    
     
     @IBOutlet weak var ownerController : PRHomeViewController?
     
@@ -30,6 +35,9 @@ class PRHomeTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
         delegate = self
         
         register(UINib.init(nibName: "PRHomeTableCell", bundle: nil), forCellReuseIdentifier: kRecordCellID)
+        
+        modifyView = Bundle.main.loadNibNamed("PRModifyRecordView", owner: nil, options: nil)?.first as! PRModifyRecordView?
+        modifyView?.delegate = self
     }
     
     func refresh() {
@@ -38,6 +46,15 @@ class PRHomeTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
                 print(err)
             } else {
                 self.reloadData()
+            }
+        }
+    }
+    
+    func modifyRecordView(_ modifyRecordView: PRModifyRecordView, didModify date: Date) {
+        if modifyRecordView == modifyView {
+            if modifyingIndexPath != nil {
+                dataManager.modifyRecord(atGroupIndex: modifyingIndexPath!.section, recordIndex: modifyingIndexPath!.row, withDate: date)
+                reloadData()
             }
         }
     }
@@ -89,6 +106,10 @@ class PRHomeTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let group = dataManager.data[indexPath.section]
+        let record = group.records[indexPath.row]
+        modifyView?.show(withDate: record)
+        modifyingIndexPath = indexPath
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
