@@ -12,14 +12,14 @@ let kRecordCellID = "RecordCell"
 
 class PRHomeTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
 
-    var dataManager = PRRecordDataManager.sharedManager
+    weak var dataManager : PRRecordDataManager! = PRRecordDataManager.sharedManager
     
+    @IBOutlet weak var ownerController : PRHomeViewController?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         config()
-        refresh()
     }
     
     private func config() {

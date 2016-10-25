@@ -23,6 +23,12 @@ class PRHomeTableHeader: UIView {
     
     
     func setupLabTotal() {
-        labTotal.text = "0hrs"
+        let durString : String
+        if let dur = recordGroup?.calcDuration() {
+            durString = String(format: "%.2lf", dur / 3600.0)
+        } else {
+            durString = "0"
+        }
+        labTotal.text = "\(durString) hrs"
     }
 }

@@ -28,4 +28,14 @@ class PRRecordGroup: NSObject, NSCoding {
         self.date = aDecoder.decodeObject(forKey: "date") as! String
         self.records = aDecoder.decodeObject(forKey: "records") as! [Date]
     }
+    
+    func calcDuration() -> TimeInterval {
+        var dur : TimeInterval = 0
+        
+        if records.count >= 2 {
+            dur = records.first!.timeIntervalSince(records.last!)
+        }
+        
+        return dur
+    }
 }

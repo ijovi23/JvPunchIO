@@ -9,6 +9,8 @@
 import UIKit
 import FileKit
 
+let kRecordDataSavedNotification = Notification.Name("RecordDataSavedNotification")
+
 class PRRecordDataManager: NSObject {
     var data : [PRRecordGroup] = []
     
@@ -62,6 +64,14 @@ class PRRecordDataManager: NSObject {
         saveData(callback: nil)
     }
     
+    func calcDuration() -> TimeInterval {
+        var totalDur : TimeInterval = 0
+        for group in data {
+            totalDur += group.calcDuration()
+        }
+        return totalDur
+    }
+    
     func getGroup(withDate date: String) -> (group: PRRecordGroup?, index: Int?) {
         for (idx, aGroup) in data.enumerated() {
             if aGroup.date == date {
@@ -72,21 +82,26 @@ class PRRecordDataManager: NSObject {
     }
     
     func loadData(callback: ((NSError?) -> Void)?) {
-//        let recList = [Date(), Date.init(timeIntervalSinceNow: 9910)]
-//        data.append(PRRecordGroup(withDate: "2016-10-24", records: recList))
-//        callback?(nil)
         
         data.removeAll()
+        
         if Path(archFilePath()).exists {
             let unarchiveDate = NSKeyedUnarchiver.unarchiveObject(withFile: archFilePath()) as! [PRRecordGroup]
             data.append(contentsOf: unarchiveDate)
         }
+        
+        NotificationCenter.default.post(name: kRecordDataSavedNotification, object: nil)
+        
+        callback?(nil)
     }
     
     func saveData(callback: ((NSError?) -> Void)?) {
+        
         if NSKeyedArchiver.archiveRootObject(data, toFile: archFilePath()) {
+            NotificationCenter.default.post(name: kRecordDataSavedNotification, object: nil)
             print("- Archive Successfully -")
             callback?(nil)
+            
         } else {
             callback?(NSError(domain: "Archive Failed", code: -100, userInfo: nil))
         }
