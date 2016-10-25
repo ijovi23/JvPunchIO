@@ -18,10 +18,14 @@ class PRRecordDataManager: NSObject {
         let recordDate = record.pr_dateString()
         var (group, _) = getGroup(withDate: recordDate)
         if group != nil {
-            group?.records.insert(record, at: 0)
+            group?.records.append(record)
+            group?.records.sort(by: >)
         } else {
             group = PRRecordGroup(withDate: recordDate, records: [record])
-            data.insert(group!, at: 0)
+            data.append(group!)
+            data.sort(by: { (group1, group2) -> Bool in
+                group1.date > group2.date
+            })
         }
         saveData(callback: nil)
     }

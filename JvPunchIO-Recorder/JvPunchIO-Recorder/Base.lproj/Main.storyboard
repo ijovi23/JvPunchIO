@@ -48,6 +48,9 @@
                                         <state key="normal" title="Add">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btnAddPressed:" destination="M3L-AN-8RK" eventType="touchUpInside" id="6Qu-Of-sSU"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iyD-K2-bGU">
                                         <color key="backgroundColor" red="1" green="0.64038420376712324" blue="0.52394584760273977" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

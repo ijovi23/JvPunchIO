@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PRHomeViewController: UIViewController {
+class PRHomeViewController: UIViewController, PRAddRecordViewDelegate {
 
     @IBOutlet weak var table: PRHomeTableView!
     
@@ -19,10 +19,13 @@ class PRHomeViewController: UIViewController {
     @IBOutlet weak var btnAdd: UIButton!
     @IBOutlet weak var btnPunch: UIButton!
     
+    var addView: PRAddRecordView?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupUI()
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,10 +34,18 @@ class PRHomeViewController: UIViewController {
     }
     
 
+    func setupUI() {
+        addView = Bundle.main.loadNibNamed("PRAddRecordView", owner: nil, options: nil)?.first as! PRAddRecordView?
+        addView?.delegate = self
+    }
     
     @IBAction func btnPunchPressed(_ sender: UIButton) {
         self.table.dataManager.addRecord(Date())
         self.table.reloadData()
+    }
+    
+    @IBAction func btnAddPressed(_ sender: UIButton) {
+        addView?.show()
     }
 
     @IBAction func btnClearPressed(_ sender: UIBarButtonItem) {
@@ -50,5 +61,12 @@ class PRHomeViewController: UIViewController {
         alert.addAction(actClear)
         
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func addRecordView(_ addRecordView: PRAddRecordView, didAdd date: Date) {
+        if addRecordView == addView {
+            self.table.dataManager.addRecord(date)
+            self.table.reloadData()
+        }
     }
 }
